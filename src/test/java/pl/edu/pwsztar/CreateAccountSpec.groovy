@@ -10,7 +10,7 @@ class CreateAccountSpec extends Specification {
 
         given: "initial data"
             def bank = new Bank()
-        when: "the account is credited"
+        when: "the account is created"
             def number = bank.createAccount()
         then: "check account number"
             number == accountNumber
