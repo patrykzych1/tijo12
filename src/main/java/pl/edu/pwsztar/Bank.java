@@ -1,14 +1,26 @@
 package pl.edu.pwsztar;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 // TODO: Prosze dokonczyc implementacje oraz testy jednostkowe
 // TODO: Prosze nie zmieniac nazw metod - wszystkie inne chwyty dozwolone
 // TODO: (prosze jedynie trzymac sie dokumentacji zawartej w interfejsie BankOperation)
 class Bank implements BankOperation {
 
     private static int accountNumber = 0;
-
+    private List<Account> accounts = new ArrayList<Account>();
     public int createAccount() {
-        return ++accountNumber;
+        accounts.add(new Account(++accountNumber, 0));
+        return accountNumber;
+    }
+
+    public void createSampleAccounts() {
+        accounts.add(new Account(++accountNumber, 200));
+        accounts.add(new Account(++accountNumber, 370));
+        accounts.add(new Account(++accountNumber, 123));
+        accounts.add(new Account(++accountNumber, 650));
     }
 
     public int deleteAccount(int accountNumber) {
