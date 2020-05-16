@@ -17,9 +17,9 @@ class WithdrawSpec extends Specification{
 
         where:
         accountNumber   | amount | exist
-        1               | 10     | false
-        2               | 20     | false
-        3               | 30     | false
-        4               | 40     | false
+        1               | 10     | true
+        2               | 20     | true
+        3               | 30     | true
+        4               | 40     | true
     }
 }

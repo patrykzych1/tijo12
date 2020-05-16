@@ -8,8 +8,8 @@ class AccountBalanceSpec extends Specification {
     def "should get balance from #accountNumber"() {
 
         given: "initial data"
-          def bank = new Bank()
-          bank.createSampleAccounts()
+           def bank = new Bank()
+           bank.createSampleAccounts()
         when: "check account balance"
            def result = bank.accountBalance(accountNumber)
         then: "check account number"
@@ -17,9 +17,9 @@ class AccountBalanceSpec extends Specification {
 
         where:
         accountNumber   | balance
-        1               | 0
-        2               | 0
-        3               | 0
-        4               | 0
+        1               | 200
+        2               | 370
+        3               | 123
+        4               | 650
     }
 }
